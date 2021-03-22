@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@page import="classes.User" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +12,9 @@
 <jsp:setProperty property="*" name="user"/>
 <jsp:getProperty property="nom" name="user"/><br>
 <jsp:getProperty property="prenom" name="user"/><br>
-<jsp:getProperty property="age" name="user"/>
+
+<% User us=user;
+out.print(us.getAge());
+%>
 </body>
 </html>
